@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "vddgroupdial",
+  "version": "1.0.0",
+  "description": "Nueva extensión premium para organizar tus marcadores",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "scripts": [
+      "background.js"
+    ],
+    "type": "module"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "bookmarks",
+    "contextMenus"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "Help.md"
+      ],
+      "matches": [
+        "*://*/*"
+      ]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "vddgroupdial@mimail.com",
+      "strict_min_version": "109.0"
+    }
+  }
+}
