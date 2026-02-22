@@ -18,11 +18,18 @@ These are the simplest browsers to run custom code. Follow these steps:
 
 ## Mozilla Firefox (Gecko-based)
 
-Firefox has a very strict extension signature system, but testing them locally is very intuitive. 
+Firefox has a very strict extension signature system, but testing them locally is very intuitive. You can use the `dist` folder directly or the pre-compiled `.xpi` package.
 
+### Option 1: File `.xpi` (Permanent & Standard installation)
+1. Open Firefox and go directly to `about:addons`.
+2. Click on the tiny "Gear" icon (Tools for all add-ons) next to "Manage Your Extensions", and choose **Install Add-on From File...**.
+3. A system dialog pane to upload files will appear. Navigate to the root folder of this project (`groupspeeddial`) and select the file **`vddgroupdial.xpi`**.
+4. Confirm the installation when the pop-up asks for permissions. 
+
+### Option 2: Upload source directory (Testing developers)
 1. Open a new tab and type: `about:debugging#/runtime/this-firefox`
 2. You will see a section named **Temporary Extensions**. Click on the prominent button that says **Load Temporary Add-on...**.
-3. A system dialog pane will appear. Instead of a whole folder like in Chrome, you must enter the `groupspeeddial` folder -> then open the `dist` folder -> and explicitly open the file inside named **`manifest.json`**.
+3. A system dialog pane will appear. You must enter the `groupspeeddial` folder -> then open the `dist` folder -> and explicitly open the file inside named **`manifest.json`**.
 4. Excellent! Firefox now recognizes and hosts your extension temporarily. 
 
-_**Note on Firefox**: Being a "Temporary Add-on" for security reasons, Firefox might disable the extension natively if you restart the browser. If it is removed, you will have to repeat step 2 manually when deploying development code._
+_**Note on Firefox Temporary Installation**: Being a "Temporary Add-on" for security reasons through Option 2, Firefox might disable the extension natively if you restart the browser. Using Option 1 (`.xpi`) bypasses this._

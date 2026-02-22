@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build:xpi": "npm run build && powershell -Command \"Compress-Archive -Path dist\\* -DestinationPath vddgroupdial.xpi -Force\"",
     "preview": "vite preview"
   },
   "devDependencies": {
