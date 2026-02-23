@@ -1,0 +1,234 @@
+{
+  "appName": {
+    "message": "Group Speed Dial Pro",
+    "description": "Extension Name"
+  },
+  "addGroup": {
+    "message": "Add Group"
+  },
+  "addBookmark": {
+    "message": "Add Bookmark"
+  },
+  "updateThumbnails": {
+    "message": "Update thumbnails"
+  },
+  "updateAllSlidesInGroup": {
+    "message": "Update all slides in group"
+  },
+  "updateMissingSlides": {
+    "message": "All missing (after sync)"
+  },
+  "updateAllSlideGroups": {
+    "message": "All slide groups"
+  },
+  "advanced": {
+    "message": "Advanced"
+  },
+  "showErrors": {
+    "message": "Show error log..."
+  },
+  "stats": {
+    "message": "Statistics"
+  },
+  "help": {
+    "message": "Help"
+  },
+  "searchSlide": {
+    "message": "Search slide"
+  },
+  "shareSlides": {
+    "message": "Share slides"
+  },
+  "editGroup": {
+    "message": "Edit group"
+  },
+  "options": {
+    "message": "Options"
+  },
+  "selectSlides": {
+    "message": "Select slides"
+  },
+  "title": {
+    "message": "Title"
+  },
+  "url": {
+    "message": "URL"
+  },
+  "cancel": {
+    "message": "Cancel"
+  },
+  "save": {
+    "message": "Save"
+  },
+  "groupName": {
+    "message": "Group Name"
+  },
+  "general": {
+    "message": "General"
+  },
+  "appearance": {
+    "message": "Appearance"
+  },
+  "background": {
+    "message": "Background"
+  },
+  "slides": {
+    "message": "Slides"
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "nameLabel": {
+    "message": "Name:"
+  },
+  "positionLabel": {
+    "message": "Position"
+  },
+  "columnsLabel": {
+    "message": "Columns:"
+  },
+  "rowsLabel": {
+    "message": "Rows:"
+  },
+  "groupLayout": {
+    "message": "Group layout"
+  },
+  "onlineDocs": {
+    "message": "Online documentation"
+  },
+  "dynamic": {
+    "message": "Dynamic"
+  },
+  "slideSize": {
+    "message": "Slide size:"
+  },
+  "dynamicList": {
+    "message": "Dynamic - list"
+  },
+  "direction": {
+    "message": "Direction:"
+  },
+  "horizontal": {
+    "message": "Horizontal"
+  },
+  "vertical": {
+    "message": "Vertical"
+  },
+  "columnWidth": {
+    "message": "Column width:"
+  },
+  "grid": {
+    "message": "Grid"
+  },
+  "fillGap": {
+    "message": "Fill gap"
+  },
+  "centerSlides": {
+    "message": "Center slides"
+  },
+  "aspectRatio": {
+    "message": "Slide aspect ratio:"
+  },
+  "groupIcon": {
+    "message": "Group icon"
+  },
+  "fontColor": {
+    "message": "Font color"
+  },
+  "default": {
+    "message": "Default"
+  },
+  "white": {
+    "message": "White"
+  },
+  "black": {
+    "message": "Black"
+  },
+  "backgroundType": {
+    "message": "Background type"
+  },
+  "colorPlaceholder": {
+    "message": "e.g. red or #ff0000"
+  },
+  "urlPlaceholder": {
+    "message": "https://..."
+  },
+  "lockGroup": {
+    "message": "Lock this group"
+  },
+  "passwordLabel": {
+    "message": "Password:"
+  },
+  "deleteGroup": {
+    "message": "Delete Group"
+  },
+  "alertGroupLocked": {
+    "message": "This group is locked. Enter password:"
+  },
+  "alertIncorrectPassword": {
+    "message": "Incorrect password."
+  },
+  "alertConfirmDelete": {
+    "message": "Are you sure you want to delete this bookmark?"
+  },
+  "alertConfirmDeleteGroup": {
+    "message": "Are you sure you want to entirely delete this group?"
+  },
+  "alertCannotDeleteLastGroup": {
+    "message": "You cannot delete the only existing group."
+  },
+  "alertSelectGroupFirst": {
+    "message": "Select a group first."
+  },
+  "alertGroupLockedAddEdit": {
+    "message": "This group is locked. Unlock it to add or edit bookmarks."
+  },
+  "alertThumbnailsLoaded": {
+    "message": "All thumbnails in this group are correctly loaded."
+  },
+  "alertLogCleared": {
+    "message": "The incident log for this session has been cleared."
+  },
+  "alertInDevelopment": {
+    "message": "'Select slides' feature is in development..."
+  },
+  "alertSelectValidGroup": {
+    "message": "Try selecting a valid group in the top tabs first."
+  },
+  "alertNoBookmarkSelected": {
+    "message": "You haven't selected any bookmark."
+  },
+  "alertBookmarksCopied": {
+    "message": "Bookmarks copied to clipboard!"
+  },
+  "alertCopyError": {
+    "message": "Error copying to clipboard. Check your browser permissions."
+  },
+  "alertImportSuccess": {
+    "message": "Import completed! $1 native bookmarks were imported."
+  },
+  "alertImportErrorNative": {
+    "message": "Error importing native bookmarks."
+  },
+  "alertImportSuccessHTML": {
+    "message": "Success! $1 bookmarks were imported correctly."
+  },
+  "alertImportErrorHTML": {
+    "message": "An error occurred while processing the HTML file."
+  },
+  "promptGroupLockedAccess": {
+    "message": "This group is locked. Enter password to access:"
+  },
+  "promptGroupLockedEdit": {
+    "message": "Enter password to edit this locked group:"
+  },
+  "promptGroupLockedDelete": {
+    "message": "Enter password to delete this locked group:"
+  },
+  "confirmDeleteGroupArg": {
+    "message": "Are you sure you want to delete the group \"$1\" and all its bookmarks?"
+  },
+  "confirmDeleteBookmarkArg": {
+    "message": "Delete \"$1\"?"
+  }
+}

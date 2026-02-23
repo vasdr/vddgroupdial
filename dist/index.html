@@ -27,7 +27,7 @@
             <button id="scroll-up-btn" class="scroll-btn hidden">▲</button>
             <button id="scroll-down-btn" class="scroll-btn hidden">▼</button>
           </div>
-          <button id="add-group-tab-btn" title="Añadir Grupo"
+          <button id="add-group-tab-btn" data-i18n-title="addGroup" title="Añadir Grupo"
             style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.05); color: white; border-radius: 4px; padding: 8px 10px; font-weight: bold; font-size: 1.2rem; line-height: 1; cursor: pointer; transition: background 0.2s;">+</button>
         </div>
       </div>
@@ -42,9 +42,7 @@
         <button id="add-btn" class="btn-primary">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon">
             <path d="M12 5v14M5 12h14" />
-          </svg>
-          Añadir Marcador
-        </button>
+          </svg><span data-i18n="addBookmark">Añadir Marcador</span></button>
         <div class="dropdown-wrapper" id="dropdown-wrapper">
           <button id="settings-btn" class="btn-icon" title="Opciones Menu">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon">
@@ -61,7 +59,7 @@
                   <path d="M21 2v6h-6"></path>
                   <path d="M3 12a9 9 0 1 0 2.13-5.88L2 9"></path>
                 </svg>
-                <span>Actualizar miniaturas</span>
+                <span data-i18n="updateThumbnails">Actualizar miniaturas</span>
                 <!-- Chevron derecho para indicar sub-menú -->
                 <svg viewBox="0 0 24 24" fill="none" class="chevron-right" stroke="currentColor" stroke-width="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
@@ -70,15 +68,11 @@
 
               <!-- El panel secundario que se despliega -->
               <div class="submenu-panel hidden" id="submenu-thumbnails">
-                <button class="dropdown-item submenu-item" id="sub-update-group">
-                  Actualizar todas las diapositivas en grupo
-                </button>
+                <button class="dropdown-item submenu-item" id="sub-update-group"><span data-i18n="updateAllSlidesInGroup">Actualizar todas las diapositivas en grupo</span></button>
                 <button class="dropdown-item submenu-item" id="sub-update-missing">
                   Todas las que falten (después de la sincronización)
                 </button>
-                <button class="dropdown-item submenu-item" id="sub-update-all">
-                  Todos los grupos de diapositivas
-                </button>
+                <button class="dropdown-item submenu-item" id="sub-update-all"><span data-i18n="updateAllSlideGroups">Todos los grupos de diapositivas</span></button>
               </div>
             </div>
 
@@ -88,7 +82,7 @@
                   <path
                     d="M10 20.5V22H14V20.5C14.8 20.3 15.6 19.9 16.3 19.4L17.5 20.6L20.3 17.8L19.1 16.6C19.6 15.9 20 15 20.2 14.1H21.7V10.1H20.2C20 9.2 19.6 8.4 19.1 7.7L20.4 6.4L17.5 3.5L16.3 4.8C15.6 4.3 14.8 3.9 13.9 3.7V2.2H9.9V3.7C9.1 3.9 8.3 4.3 7.6 4.8L6.4 3.5L3.6 6.4L4.8 7.6C4.3 8.3 3.9 9.1 3.7 10H2.2V14H3.7C3.9 14.8 4.3 15.6 4.8 16.3L3.5 17.6L6.4 20.4L7.6 19.2C8.3 19.7 9.1 20.1 10 20.5ZM12 16.2C9.7 16.2 7.8 14.3 7.8 12C7.8 9.7 9.7 7.8 12 7.8C14.3 7.8 16.2 9.7 16.2 12C16.2 14.3 14.3 16.2 12 16.2Z" />
                 </svg>
-                <span>Avanzado</span>
+                <span data-i18n="advanced">Avanzado</span>
                 <svg viewBox="0 0 24 24" fill="none" class="chevron-right" stroke="currentColor" stroke-width="2">
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
@@ -100,7 +94,7 @@
                     <path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z" />
                     <path d="M14 3v5h5M10 12h4v4h-4z" />
                   </svg>
-                  <span>Mostrar registro de errores...</span>
+                  <span data-i18n="showErrors">Mostrar registro de errores...</span>
                 </button>
                 <button class="dropdown-item submenu-item" id="sub-show-stats">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-small">
@@ -108,7 +102,7 @@
                     <line x1="12" y1="20" x2="12" y2="4" />
                     <line x1="6" y1="20" x2="6" y2="14" />
                   </svg>
-                  <span>Estadísticas</span>
+                  <span data-i18n="stats">Estadísticas</span>
                 </button>
               </div>
             </div>
@@ -118,14 +112,14 @@
                 <path d="M12 16v-1"></path>
                 <path d="M12 8a2 2 0 1 1 2 2c-1 1-1 2-1 3"></path>
               </svg>
-              <span>Ayuda</span>
+              <span data-i18n="help">Ayuda</span>
             </button>
             <button class="dropdown-item" id="menu-search-dial">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-small">
                 <circle cx="11" cy="11" r="8"></circle>
                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
               </svg>
-              <span>Buscar diapositiva</span>
+              <span data-i18n="searchSlide">Buscar diapositiva</span>
             </button>
             <button class="dropdown-item" id="menu-share-dials">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-small">
@@ -135,14 +129,14 @@
                 <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
                 <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
               </svg>
-              <span>Compartir diapositivas</span>
+              <span data-i18n="shareSlides">Compartir diapositivas</span>
             </button>
             <button class="dropdown-item" id="menu-edit-group">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-small">
                 <path d="M12 20h9"></path>
                 <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
               </svg>
-              <span>Editar grupo</span>
+              <span data-i18n="editGroup">Editar grupo</span>
             </button>
             <button class="dropdown-item" id="menu-options">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-small">
@@ -150,14 +144,14 @@
                   d="M12.22 2h-.44a2 2 0 0 0-2 2v1.5a1.5 1.5 0 0 1-2.6 1.5L5.85 5.8a2 2 0 0 0-2.83 0l-.3.3a2 2 0 0 0 0 2.83l1.2 1.2a1.5 1.5 0 0 1-1.5 2.6H1.5a2 2 0 0 0-2 2v.44a2 2 0 0 0 2 2h1.5a1.5 1.5 0 0 1 1.5 2.6l-1.2 1.2a2 2 0 0 0 0 2.83l.3.3a2 2 0 0 0 2.83 0l-1.2 1.2a1.5 1.5 0 0 1-2.6-1.5V4a2 2 0 0 0-2-2Z" />
                 <circle cx="12" cy="12" r="3" />
               </svg>
-              <span>Opciones</span>
+              <span data-i18n="options">Opciones</span>
             </button>
             <button class="dropdown-item" id="menu-select-dials">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-small">
                 <polyline points="9 11 12 14 22 4"></polyline>
                 <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
               </svg>
-              <span>Seleccionar diapositivas</span>
+              <span data-i18n="selectSlides">Seleccionar diapositivas</span>
             </button>
           </div>
         </div>
@@ -172,7 +166,7 @@
     <div id="modal" class="modal hidden">
       <div class="modal-content glass-panel">
         <div class="modal-header">
-          <h2 id="modal-title">Añadir Marcador</h2>
+          <h2 id="modal-title"><span data-i18n="addBookmark">Añadir Marcador</span></h2>
           <button id="close-modal" class="btn-icon">
             <!-- Close SVG -->
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon">
@@ -182,16 +176,16 @@
         </div>
         <form id="dial-form">
           <div class="form-group">
-            <label for="dial-title">Título</label>
-            <input type="text" id="dial-title" required placeholder="Ej: Google" autocomplete="off">
+            <label for="dial-title" data-i18n="title">Título</label>
+            <input type="text" id="dial-title" required data-i18n-placeholder="titlePlaceholder" placeholder="Ej: Google" autocomplete="off">
           </div>
           <div class="form-group">
-            <label for="dial-url">URL</label>
-            <input type="url" id="dial-url" required placeholder="https://google.com" autocomplete="off">
+            <label for="dial-url" data-i18n="url">URL</label>
+            <input type="url" id="dial-url" required data-i18n-placeholder="urlPlaceholder" placeholder="https://google.com" autocomplete="off">
           </div>
           <div class="modal-actions">
-            <button type="button" id="cancel-btn" class="btn-secondary">Cancelar</button>
-            <button type="submit" class="btn-primary">Guardar</button>
+            <button type="button" id="cancel-btn" class="btn-secondary" data-i18n="cancel">Cancelar</button>
+            <button type="submit" class="btn-primary" data-i18n="save">Guardar</button>
           </div>
         </form>
       </div>
@@ -201,7 +195,7 @@
     <div id="group-modal" class="modal hidden">
       <div class="modal-content glass-panel" style="max-width: 360px;">
         <div class="modal-header">
-          <h2 id="group-modal-title">Añadir Grupo</h2>
+          <h2 id="group-modal-title"><span data-i18n="addGroup">Añadir Grupo</span></h2>
           <button id="close-group-modal" class="btn-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon">
               <path d="M18 6L6 18M6 6l12 12" />
@@ -210,12 +204,12 @@
         </div>
         <form id="group-form">
           <div class="form-group">
-            <label for="group-title">Nombre del Grupo</label>
+            <label for="group-title" data-i18n="groupName">Nombre del Grupo</label>
             <input type="text" id="group-title" required placeholder="Ej: Trabajo" autocomplete="off">
           </div>
           <div class="modal-actions">
-            <button type="button" id="cancel-group-btn" class="btn-secondary">Cancelar</button>
-            <button type="submit" class="btn-primary">Guardar</button>
+            <button type="button" id="cancel-group-btn" class="btn-secondary" data-i18n="cancel">Cancelar</button>
+            <button type="submit" class="btn-primary" data-i18n="save">Guardar</button>
           </div>
         </form>
       </div>
@@ -261,43 +255,33 @@
               <svg viewBox="0 0 24 24" fill="none" class="icon-small" stroke="currentColor" stroke-width="2">
                 <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
                 <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-              </svg>
-              General
-            </button>
+              </svg><span data-i18n="general">General</span></button>
             <button class="adv-sidebar-btn" data-tab="tab-apariencia">
               <svg viewBox="0 0 24 24" fill="none" class="icon-small" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="10"></circle>
                 <circle cx="12" cy="12" r="4"></circle>
                 <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
-              </svg>
-              Apariencia
-            </button>
+              </svg><span data-i18n="appearance">Apariencia</span></button>
             <button class="adv-sidebar-btn" data-tab="tab-fondo">
               <svg viewBox="0 0 24 24" fill="none" class="icon-small" stroke="currentColor" stroke-width="2">
                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                 <circle cx="8.5" cy="8.5" r="1.5"></circle>
                 <polyline points="21 15 16 10 5 21"></polyline>
-              </svg>
-              Fondo
-            </button>
+              </svg><span data-i18n="background">Fondo</span></button>
             <button class="adv-sidebar-btn" data-tab="tab-diapositivas">
               <svg viewBox="0 0 24 24" fill="none" class="icon-small" stroke="currentColor" stroke-width="2">
                 <rect x="3" y="3" width="7" height="7"></rect>
                 <rect x="14" y="3" width="7" height="7"></rect>
                 <rect x="14" y="14" width="7" height="7"></rect>
                 <rect x="3" y="14" width="7" height="7"></rect>
-              </svg>
-              Diapositivas
-            </button>
+              </svg><span data-i18n="slides">Diapositivas</span></button>
             <button class="adv-sidebar-btn" data-tab="tab-configuracion">
               <svg viewBox="0 0 24 24" fill="none" class="icon-small" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="3"></circle>
                 <path
                   d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
                 </path>
-              </svg>
-              Configuración
-            </button>
+              </svg><span data-i18n="settings">Configuración</span></button>
           </div>
 
           <!-- Content Panels -->
@@ -310,7 +294,7 @@
                 <div
                   style="flex: 1; position: relative; border: 1px solid #0ea5e9; border-radius: 4px; padding: 0.6rem; background: rgba(0,0,0,0.1);">
                   <span
-                    style="position: absolute; top: -10px; left: 10px; background: #1a1a1a; padding: 0 5px; color: #0ea5e9; font-size: 0.75rem;">Nombre:</span>
+                    style="position: absolute; top: -10px; left: 10px; background: #1a1a1a; padding: 0 5px; color: #0ea5e9; font-size: 0.75rem;"><span data-i18n="nameLabel">Nombre:</span></span>
                   <input type="text" id="adv-group-title-input" value="Predeterminado"
                     style="width: 100%; border: none; background: transparent; color: white; font-size: 0.95rem; outline: none; font-family: inherit;">
                 </div>
@@ -318,7 +302,7 @@
                 <div
                   style="width: 120px; position: relative; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 0.6rem; display: flex; align-items: center; justify-content: space-between; background: rgba(0,0,0,0.1);">
                   <span
-                    style="position: absolute; top: -10px; left: 10px; background: #1a1a1a; padding: 0 5px; color: var(--text-secondary); font-size: 0.75rem;">Posición</span>
+                    style="position: absolute; top: -10px; left: 10px; background: #1a1a1a; padding: 0 5px; color: var(--text-secondary); font-size: 0.75rem;"><span data-i18n="positionLabel">Posición</span></span>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-small"
                     style="color:var(--text-secondary);">
                     <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
@@ -340,7 +324,7 @@
                 <div
                   style="position: relative; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 0.6rem; display: flex; align-items: center; gap: 1rem; background: rgba(0,0,0,0.3); min-width: 140px;">
                   <span
-                    style="position: absolute; top: -10px; left: 10px; background: #1a1a1a; padding: 0 5px; color: var(--text-secondary); font-size: 0.75rem;">Columnas:</span>
+                    style="position: absolute; top: -10px; left: 10px; background: #1a1a1a; padding: 0 5px; color: var(--text-secondary); font-size: 0.75rem;"><span data-i18n="columnsLabel">Columnas:</span></span>
                   <div style="width: 16px; height: 12px; background: white; border-radius: 2px;"></div>
                   <span id="adv-group-cols-val" style="font-size: 1.1rem; flex: 1;">4</span>
                   <div style="display: flex; flex-direction: column; gap: 2px;">
@@ -354,7 +338,7 @@
                 <div
                   style="position: relative; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 0.6rem; display: flex; align-items: center; gap: 1rem; background: rgba(0,0,0,0.3); min-width: 140px;">
                   <span
-                    style="position: absolute; top: -10px; left: 10px; background: #1a1a1a; padding: 0 5px; color: var(--text-secondary); font-size: 0.75rem;">Filas:</span>
+                    style="position: absolute; top: -10px; left: 10px; background: #1a1a1a; padding: 0 5px; color: var(--text-secondary); font-size: 0.75rem;"><span data-i18n="rowsLabel">Filas:</span></span>
                   <div style="width: 16px; height: 12px; background: white; border-radius: 2px;"></div>
                   <span id="adv-group-rows-val" style="font-size: 1.1rem; flex: 1;">5</span>
                   <div style="display: flex; flex-direction: column; gap: 2px;">
@@ -369,7 +353,7 @@
               <div class="adv-section-divider"></div>
 
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-                <h3 style="font-size: 1.1rem; font-weight: 500;">Diseño de grupo</h3>
+                <h3 style="font-size: 1.1rem; font-weight: 500;"><span data-i18n="groupLayout">Diseño de grupo</span></h3>
                 <a href="#" style="color: #0ea5e9; font-size: 0.85rem; text-decoration: none;">Documentación en
                   línea</a>
               </div>
@@ -377,10 +361,8 @@
               <div class="adv-radio-group" style="margin-bottom: 2rem;">
                 <label class="adv-radio-label" style="align-items: center;">
                   <span style="display:flex; align-items:center; gap:0.5rem;"><input type="radio"
-                      id="adv-layout-dynamic" name="dg" class="adv-radio"> Dinámico</span>
-                  <span style="margin-left:auto; display:flex; align-items:center; gap:1rem; font-size:0.85rem;">
-                    Tamaño de la diapositiva:
-                    <div class="adv-input-group"><button id="adv-dyn-w-down" class="btn-spinner">-</button><input
+                      id="adv-layout-dynamic" name="dg" class="adv-radio"><span data-i18n="dynamic">Dinámico</span></span>
+                  <span style="margin-left:auto; display:flex; align-items:center; gap:1rem; font-size:0.85rem;"><span data-i18n="slideSize">Tamaño de la diapositiva:</span><div class="adv-input-group"><button id="adv-dyn-w-down" class="btn-spinner">-</button><input
                         type="text" id="adv-dyn-w-val" value="240"
                         style="width:40px; text-align:center; border:none; background:transparent; color:white; font-family:monospace;"><button
                         id="adv-dyn-w-up" class="btn-spinner">+</button> px</div>
@@ -394,22 +376,17 @@
 
                 <label class="adv-radio-label" style="align-items: flex-start;">
                   <span style="display:flex; align-items:center; gap:0.5rem; margin-top: 0.2rem;"><input type="radio"
-                      id="adv-layout-list" name="dg" class="adv-radio"> Dinámico - lista</span>
+                      id="adv-layout-list" name="dg" class="adv-radio"><span data-i18n="dynamicList">Dinámico - lista</span></span>
                   <div
                     style="margin-left:auto; display:flex; flex-direction: column; align-items: flex-end; gap:0.5rem; font-size:0.85rem;">
-                    <div style="display:flex; align-items:center; gap:1rem;">
-                      Dirección:
+                    <div style="display:flex; align-items:center; gap:1rem;"><span data-i18n="direction">Dirección:</span><label
+                        style="display:flex; align-items:center; gap:0.25rem; font-weight: normal; cursor:pointer;"><input
+                          type="radio" name="dg_list_dir" id="adv-list-dir-h" class="adv-radio"><span data-i18n="horizontal">Horizontal</span></label>
                       <label
                         style="display:flex; align-items:center; gap:0.25rem; font-weight: normal; cursor:pointer;"><input
-                          type="radio" name="dg_list_dir" id="adv-list-dir-h" class="adv-radio"> Horizontal</label>
-                      <label
-                        style="display:flex; align-items:center; gap:0.25rem; font-weight: normal; cursor:pointer;"><input
-                          type="radio" name="dg_list_dir" id="adv-list-dir-v" class="adv-radio" checked>
-                        Vertical</label>
+                          type="radio" name="dg_list_dir" id="adv-list-dir-v" class="adv-radio" checked><span data-i18n="vertical">Vertical</span></label>
                     </div>
-                    <div style="display:flex; align-items:center; gap:1rem;">
-                      Ancho de columna:
-                      <div class="adv-input-group"><button id="adv-list-w-down" class="btn-spinner">-</button><input
+                    <div style="display:flex; align-items:center; gap:1rem;"><span data-i18n="columnWidth">Ancho de columna:</span><div class="adv-input-group"><button id="adv-list-w-down" class="btn-spinner">-</button><input
                           type="text" id="adv-list-w-val" value="240"
                           style="width:40px; text-align:center; border:none; background:transparent; color:white; font-family:monospace;"><button
                           id="adv-list-w-up" class="btn-spinner">+</button> px</div>
@@ -421,22 +398,20 @@
                   style="background: rgba(14, 165, 233, 0.05); padding: 1rem; border-radius: 4px; border: 1px solid rgba(14, 165, 233, 0.2); margin-top: 0.5rem;">
                   <label class="adv-radio-label"><span
                       style="display:flex; align-items:center; gap:0.5rem; font-weight: 500; color: #0ea5e9;"><input
-                        type="radio" id="adv-layout-grid" name="dg" class="adv-radio" checked> Cuadrícula</span></label>
+                        type="radio" id="adv-layout-grid" name="dg" class="adv-radio" checked><span data-i18n="grid">Cuadrícula</span></span></label>
 
                   <div style="display: flex; flex-direction: column; gap: 1rem; padding-left: 2rem; margin-top: 1rem;">
                     <label style="display:flex; align-items:center; justify-content: space-between; cursor:pointer;">
                       <span style="display:flex; align-items:center; gap:0.5rem;"><input type="radio" id="adv-grid-fill"
-                          name="dg_sub" checked class="adv-radio"> Rellenar hueco</span>
+                          name="dg_sub" checked class="adv-radio"><span data-i18n="fillGap">Rellenar hueco</span></span>
                       <span
                         style="background:rgba(255,255,255,0.1); width:20px; height:20px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:bold; color: var(--text-secondary);">?</span>
                     </label>
 
                     <label style="display:flex; align-items:center; justify-content: space-between; cursor:pointer;">
                       <span style="display:flex; align-items:center; gap:0.5rem;"><input type="radio"
-                          id="adv-grid-center" name="dg_sub" class="adv-radio"> Centrar diapositivas</span>
-                      <span style="display:flex; align-items:center; gap:1rem; font-size:0.85rem;">
-                        Relación de aspecto de la diapositiva:
-                        <div class="adv-input-group">
+                          id="adv-grid-center" name="dg_sub" class="adv-radio"><span data-i18n="centerSlides">Centrar diapositivas</span></span>
+                      <span style="display:flex; align-items:center; gap:1rem; font-size:0.85rem;"><span data-i18n="aspectRatio">Relación de aspecto de la diapositiva:</span><div class="adv-input-group">
                           <input type="text" id="adv-grid-aw-val" value="16"
                             style="width:30px; text-align:center; border:none; background:transparent; color:white; font-family:monospace;">
                           <div style="width:12px; display:flex; flex-direction:column;"><button id="adv-grid-aw-up"
@@ -464,7 +439,7 @@
             <div id="tab-apariencia" class="adv-tab-content hidden">
               <div class="adv-section-divider"></div>
 
-              <h3 style="font-size: 1.1rem; font-weight: 500; margin-bottom: 1rem;">Icono del grupo</h3>
+              <h3 style="font-size: 1.1rem; font-weight: 500; margin-bottom: 1rem;"><span data-i18n="groupIcon">Icono del grupo</span></h3>
               <div id="adv-icon-grid"
                 style="background: rgba(0,0,0,0.3); border-radius: 8px; padding: 1rem; display: grid; grid-template-columns: repeat(16, 1fr); gap: 10px; margin-bottom: 2rem;">
                 <div class="adv-icon-choice active" data-icon="✖">✖</div>
@@ -635,8 +610,7 @@
                 <div>
                   <label
                     style="display: flex; align-items: center; gap: 0.5rem; font-weight: 500; margin-bottom: 0.25rem;">
-                    <input type="checkbox" id="adv-set-default"> Predeterminado
-                  </label>
+                    <input type="checkbox" id="adv-set-default"><span data-i18n="default">Predeterminado</span></label>
                   <p style="font-size: 0.85rem; color: var(--text-secondary); margin-left: 1.75rem;">Abrir este
                     grupo al
                     inicio</p>
@@ -645,8 +619,7 @@
                 <div>
                   <label
                     style="display: flex; align-items: center; gap: 0.5rem; font-weight: 500; margin-bottom: 0.25rem;">
-                    <input type="checkbox" id="adv-is-locked"> Bloquear este grupo
-                  </label>
+                    <input type="checkbox" id="adv-is-locked"><span data-i18n="lockGroup">Bloquear este grupo</span></label>
                   <p style="font-size: 0.85rem; color: var(--text-secondary); margin-left: 1.75rem; line-height: 1.4;">
                     Solo podrás abrir este grupo al introducir su contraseña. <br>Los datos del grupo
                     bloqueado

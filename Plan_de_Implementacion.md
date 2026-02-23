@@ -316,3 +316,14 @@ Para facilitar que el usuario y otros desarrolladores accedan al código:
 *   **[NEW]** `.gitignore`
     * Asegurar que no se suban ficheros pesados como `node_modules`, ni variables locales o caches de Vite/npm.
 *   **Comandos de Git**: Inicialización del repo `git init`, adición de todos los archivos válidos `git add .` y creación de un commit base "v1.0.0 Release - Premium Version".
+
+## Fase V23: Internacionalización Dinámica (i18n Multi-capa)
+Para causar un impacto masivo a nivel local y mundial en GitHub y tiendas de extensiones, implementaremos el API nativa robusta de Chromium/Gecko: `chrome.i18n`. Mantendremos explícitamente el **Español (es)** de base como homenaje a la creación local, y se inyectará el **Inglés (en)** para la adopción internacional comunitaria.
+*   **[NEW]** Carpetas `public/_locales/en/messages.json` y `public/_locales/es/messages.json`.
+    * Cada string de la aplicación figurará listada como JSON en clave-valor. Cualquier nuevo colaborador de Github podrá clonar el de inglés, traducirlo a su idioma (ej. `/fr/` u `/ru/`) y mandarnos el código.
+*   **[MODIFY]** `manifest.json` -> Declarar `"default_locale": "en"`.
+*   **[MODIFY]** `index.html` -> Convertir todos los textos fijos en atributos pre-procesables (`data-i18n="botonAceptar"`).
+*   **[MODIFY]** `src/main.ts` ->
+    * Recorrer mediante un script DOM todos los nodos validando `chrome.i18n.getMessage(key)`.
+    * Rastrear los más de 12 textos de diálogos estáticos `alert()` y `prompt()` e inyectar el getMessage() local.
+*   **[NEW]** `README.md` -> Se creará el fichero base canónico de los repositorios de Github, escrito en puro markdown en inglés ilustrando para qué sirve, acompañado en su futuro de traducciones de README.

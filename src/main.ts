@@ -2,6 +2,35 @@ import './style.css';
 import { getGroups, addGroup, updateGroup, removeGroup, getDialsByGroup, addDial, removeDial, updateDial, saveDials, importNativeBookmarksBulk, importHtmlBookmarks, getAllDials } from './api';
 import type { Dial, Group } from './api';
 
+// ====== i18n Localization Layer ======
+function localizeUI() {
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const key = el.getAttribute('data-i18n');
+    if (key) {
+      const msg = chrome.i18n.getMessage(key);
+      if (msg) el.textContent = msg;
+    }
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (key) {
+      const msg = chrome.i18n.getMessage(key);
+      if (msg) el.setAttribute('placeholder', msg);
+    }
+  });
+
+  document.querySelectorAll('[data-i18n-title]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-title');
+    if (key) {
+      const msg = chrome.i18n.getMessage(key);
+      if (msg) el.setAttribute('title', msg);
+    }
+  });
+}
+document.addEventListener('DOMContentLoaded', localizeUI);
+// =====================================
+
 let activeGroupId: string | null = null;
 let editingDialId: string | null = null;
 let editingGroupId: string | null = null;
@@ -361,7 +390,7 @@ async function renderGroups() {
       if ((e.target as HTMLElement).closest('.group-tab-actions')) return;
 
       if (group.isLocked && activeGroupId !== group.id) {
-        const password = prompt('Este grupo está bloqueado. Introduce la contraseña para acceder:');
+        const password = prompt(chrome.i18n.getMessage('promptGroupLockedAccess'));
         const correctPassword = group.password || '0000';
         if (password !== correctPassword) {
           return;
@@ -377,7 +406,7 @@ async function renderGroups() {
     editBtn?.addEventListener('click', (e) => {
       e.stopPropagation();
       if (group.isLocked) {
-        const password = prompt('Introduce la contraseña para editar este grupo bloqueado:');
+        const password = prompt(chrome.i18n.getMessage('promptGroupLockedEdit'));
         const correctPassword = group.password || '0000';
         if (password !== correctPassword) return;
       }
@@ -388,15 +417,15 @@ async function renderGroups() {
     delBtn?.addEventListener('click', async (e) => {
       e.stopPropagation();
       if (group.isLocked) {
-        const password = prompt('Introduce la contraseña para eliminar este grupo bloqueado:');
+        const password = prompt(chrome.i18n.getMessage('promptGroupLockedDelete'));
         const correctPassword = group.password || '0000';
         if (password !== correctPassword) return;
       }
       if (groups.length === 1) {
-        alert('No puedes eliminar el único grupo que existe.');
+        alert(chrome.i18n.getMessage('alertCannotDeleteLastGroup'));
         return;
       }
-      if (confirm(`¿Estás seguro de eliminar el grupo "${group.title}" y todos sus marcadores?`)) {
+      if (confirm(chrome.i18n.getMessage('confirmDeleteGroupArg').replace('$1', group.title))) {
         await removeGroup(group.id);
         if (activeGroupId === group.id) activeGroupId = null; // Reset if deleted
         await renderGroups();
@@ -584,7 +613,7 @@ async function renderDials() {
 
     card.querySelector('.edit-btn')?.addEventListener('click', () => openModal(dial));
     card.querySelector('.delete-btn')?.addEventListener('click', async () => {
-      if (confirm(`¿Eliminar "${dial.title}"?`)) {
+      if (confirm(chrome.i18n.getMessage('confirmDeleteBookmarkArg').replace('$1', dial.title))) {
         await removeDial(dial.id);
         await renderDials();
       }
@@ -636,10 +665,10 @@ async function renderDials() {
 
 // DIALS MODAL LOGIC
 async function openModal(dial?: Dial) {
-  if (!activeGroupId) { alert('Selecciona un grupo primero.'); return; }
+  if (!activeGroupId) { alert(chrome.i18n.getMessage('alertSelectGroupFirst')); return; }
   const groups = await getGroups();
   const currentGroup = groups.find(g => g.id === activeGroupId);
-  if (currentGroup?.isLocked) { alert('Este grupo está bloqueado. Desbloquéalo para añadir o editar marcadores.'); return; }
+  if (currentGroup?.isLocked) { alert(chrome.i18n.getMessage('alertGroupLockedAddEdit')); return; }
 
   modal.classList.remove('hidden');
   if (dial) {
@@ -1395,7 +1424,7 @@ errorsModal.addEventListener('click', (e) => {
 
 clearErrorsBtn.addEventListener('click', () => {
   errorsLogArea.value = '';
-  alert('Se ha vaciado el Log de incidentes de esta sesión.');
+  alert(chrome.i18n.getMessage('alertLogCleared'));
 });
 
 // Busca Marcadores Logic
@@ -1500,7 +1529,7 @@ document.getElementById('menu-options')?.addEventListener('click', () => {
 
 document.getElementById('menu-select-dials')?.addEventListener('click', () => {
   dropdownMenu.classList.add('hidden');
-  alert("Función 'Seleccionar diapositivas' en desarrollo...");
+  alert(chrome.i18n.getMessage('alertInDevelopment'));
 });
 
 /* =========================================================
@@ -1644,14 +1673,44 @@ shareAdvancedCopyBtn.addEventListener('click', async () => {
   const d = allDials.filter(dial => shareSelectedDials.has(dial.id));
 
   const title = shareTitleInput.value || 'Mis Marcadores';
-  const textContent = `${title}:\n\n` + d.map(x => `${x.title} - ${x.url}`).join('\n');
+  const textContent = `${title}:\n
+// ====== i18n Localization Layer ======
+function localizeUI() {
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const key = el.getAttribute('data-i18n');
+    if (key) {
+      const msg = chrome.i18n.getMessage(key);
+      if (msg) el.textContent = msg;
+    }
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (key) {
+      const msg = chrome.i18n.getMessage(key);
+      if (msg) el.setAttribute('placeholder', msg);
+    }
+  });
+
+  document.querySelectorAll('[data-i18n-title]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-title');
+    if (key) {
+      const msg = chrome.i18n.getMessage(key);
+      if (msg) el.setAttribute('title', msg);
+    }
+  });
+}
+document.addEventListener('DOMContentLoaded', localizeUI);
+// =====================================
+
+\n\n` + d.map(x => `${x.title} - ${x.url}`).join('\n');
   try {
     await navigator.clipboard.writeText(textContent);
-    alert('¡Marcadores copiados al portapapeles!');
+    alert(chrome.i18n.getMessage('alertBookmarksCopied'));
     cancelShareSelectionMode();
   } catch (err) {
     console.error('Error al copiar: ', err);
-    alert('Error al copiar al portapapeles. Revisa los permisos de tu navegador.');
+    alert(chrome.i18n.getMessage('alertCopyError'));
   }
 });
 
@@ -1711,13 +1770,13 @@ async function handleNativeImport() {
   btn2.textContent = 'Importando...';
   try {
     const count = await importNativeBookmarksBulk();
-    alert(`¡Importación completada! Se han importado ${count} marcadores nativos.`);
+    alert(chrome.i18n.getMessage('alertImportSuccess').replace('$1', String(count)));
     onboardingModal.classList.add('hidden');
     toggleSettings(); // Cierra o no importa, init() recargará igual.
     window.location.reload(); // Recarga limpia
   } catch (err) {
     console.error(err);
-    alert('Error al importar marcadores nativos.');
+    alert(chrome.i18n.getMessage('alertImportErrorNative'));
     btn1.textContent = '🦊 Importar del Navegador';
     btn2.textContent = '🦊 Importar Marcadores del Navegador';
   }
@@ -1733,12 +1792,12 @@ async function handleHtmlImport(e: Event) {
     const text = ev.target?.result as string;
     try {
       const count = await importHtmlBookmarks(text);
-      alert(`¡Éxito! Se han importado ${count} marcadores correctamente.`);
+      alert(chrome.i18n.getMessage('alertImportSuccessHTML').replace('$1', String(count)));
       onboardingModal.classList.add('hidden');
       window.location.reload();
     } catch (err) {
       console.error(err);
-      alert('Ocurrió un error al procesar el archivo HTML.');
+      alert(chrome.i18n.getMessage('alertImportErrorHTML'));
     }
   };
   reader.readAsText(file);

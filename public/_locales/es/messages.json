@@ -1,0 +1,234 @@
+{
+  "appName": {
+    "message": "Group Speed Dial Pro",
+    "description": "Nombre de la extensión"
+  },
+  "addGroup": {
+    "message": "Añadir Grupo"
+  },
+  "addBookmark": {
+    "message": "Añadir Marcador"
+  },
+  "updateThumbnails": {
+    "message": "Actualizar miniaturas"
+  },
+  "updateAllSlidesInGroup": {
+    "message": "Actualizar todas las diapositivas en grupo"
+  },
+  "updateMissingSlides": {
+    "message": "Todas las que falten (después de la sincronización)"
+  },
+  "updateAllSlideGroups": {
+    "message": "Todos los grupos de diapositivas"
+  },
+  "advanced": {
+    "message": "Avanzado"
+  },
+  "showErrors": {
+    "message": "Mostrar registro de errores..."
+  },
+  "stats": {
+    "message": "Estadísticas"
+  },
+  "help": {
+    "message": "Ayuda"
+  },
+  "searchSlide": {
+    "message": "Buscar diapositiva"
+  },
+  "shareSlides": {
+    "message": "Compartir diapositivas"
+  },
+  "editGroup": {
+    "message": "Editar grupo"
+  },
+  "options": {
+    "message": "Opciones"
+  },
+  "selectSlides": {
+    "message": "Seleccionar diapositivas"
+  },
+  "title": {
+    "message": "Título"
+  },
+  "url": {
+    "message": "URL"
+  },
+  "cancel": {
+    "message": "Cancelar"
+  },
+  "save": {
+    "message": "Guardar"
+  },
+  "groupName": {
+    "message": "Nombre del Grupo"
+  },
+  "general": {
+    "message": "General"
+  },
+  "appearance": {
+    "message": "Apariencia"
+  },
+  "background": {
+    "message": "Fondo"
+  },
+  "slides": {
+    "message": "Diapositivas"
+  },
+  "settings": {
+    "message": "Configuración"
+  },
+  "nameLabel": {
+    "message": "Nombre:"
+  },
+  "positionLabel": {
+    "message": "Posición"
+  },
+  "columnsLabel": {
+    "message": "Columnas:"
+  },
+  "rowsLabel": {
+    "message": "Filas:"
+  },
+  "groupLayout": {
+    "message": "Diseño de grupo"
+  },
+  "onlineDocs": {
+    "message": "Documentación en línea"
+  },
+  "dynamic": {
+    "message": "Dinámico"
+  },
+  "slideSize": {
+    "message": "Tamaño de la diapositiva:"
+  },
+  "dynamicList": {
+    "message": "Dinámico - lista"
+  },
+  "direction": {
+    "message": "Dirección:"
+  },
+  "horizontal": {
+    "message": "Horizontal"
+  },
+  "vertical": {
+    "message": "Vertical"
+  },
+  "columnWidth": {
+    "message": "Ancho de columna:"
+  },
+  "grid": {
+    "message": "Cuadrícula"
+  },
+  "fillGap": {
+    "message": "Rellenar hueco"
+  },
+  "centerSlides": {
+    "message": "Centrar diapositivas"
+  },
+  "aspectRatio": {
+    "message": "Relación de aspecto de la diapositiva:"
+  },
+  "groupIcon": {
+    "message": "Icono del grupo"
+  },
+  "fontColor": {
+    "message": "Color de fuente"
+  },
+  "default": {
+    "message": "Predeterminado"
+  },
+  "white": {
+    "message": "Blanco"
+  },
+  "black": {
+    "message": "Negro"
+  },
+  "backgroundType": {
+    "message": "Fondo"
+  },
+  "colorPlaceholder": {
+    "message": "ej. red o #ff0000"
+  },
+  "urlPlaceholder": {
+    "message": "https://..."
+  },
+  "lockGroup": {
+    "message": "Bloquear este grupo"
+  },
+  "passwordLabel": {
+    "message": "Contraseña:"
+  },
+  "deleteGroup": {
+    "message": "Borrar Grupo"
+  },
+  "alertGroupLocked": {
+    "message": "Este grupo está bloqueado. Introduce la contraseña:"
+  },
+  "alertIncorrectPassword": {
+    "message": "Contraseña incorrecta."
+  },
+  "alertConfirmDelete": {
+    "message": "¿Estás seguro de que deseas eliminar este marcador?"
+  },
+  "alertConfirmDeleteGroup": {
+    "message": "¿Estás seguro de que deseas eliminar este grupo por completo?"
+  },
+  "alertCannotDeleteLastGroup": {
+    "message": "No puedes eliminar el único grupo que existe."
+  },
+  "alertSelectGroupFirst": {
+    "message": "Selecciona un grupo primero."
+  },
+  "alertGroupLockedAddEdit": {
+    "message": "Este grupo está bloqueado. Desbloquéalo para añadir o editar marcadores."
+  },
+  "alertThumbnailsLoaded": {
+    "message": "Todas las miniaturas de este grupo están correctamente cargadas."
+  },
+  "alertLogCleared": {
+    "message": "Se ha vaciado el Log de incidentes de esta sesión."
+  },
+  "alertInDevelopment": {
+    "message": "Función 'Seleccionar diapositivas' en desarrollo..."
+  },
+  "alertSelectValidGroup": {
+    "message": "Prueba seleccionando un grupo válido en las pestañas superiores primero."
+  },
+  "alertNoBookmarkSelected": {
+    "message": "No has seleccionado ningún marcador."
+  },
+  "alertBookmarksCopied": {
+    "message": "¡Marcadores copiados al portapapeles!"
+  },
+  "alertCopyError": {
+    "message": "Error al copiar al portapapeles. Revisa los permisos de tu navegador."
+  },
+  "alertImportSuccess": {
+    "message": "¡Importación completada! Se han importado $1 marcadores nativos."
+  },
+  "alertImportErrorNative": {
+    "message": "Error al importar marcadores nativos."
+  },
+  "alertImportSuccessHTML": {
+    "message": "¡Éxito! Se han importado $1 marcadores correctamente."
+  },
+  "alertImportErrorHTML": {
+    "message": "Ocurrió un error al procesar el archivo HTML."
+  },
+  "promptGroupLockedAccess": {
+    "message": "Este grupo está bloqueado. Introduce la contraseña para acceder:"
+  },
+  "promptGroupLockedEdit": {
+    "message": "Introduce la contraseña para editar este grupo bloqueado:"
+  },
+  "promptGroupLockedDelete": {
+    "message": "Introduce la contraseña para eliminar este grupo bloqueado:"
+  },
+  "confirmDeleteGroupArg": {
+    "message": "¿Estás seguro de eliminar el grupo \"$1\" y todos sus marcadores?"
+  },
+  "confirmDeleteBookmarkArg": {
+    "message": "¿Eliminar \"$1\"?"
+  }
+}
