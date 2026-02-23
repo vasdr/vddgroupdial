@@ -1,7 +1,7 @@
 # Group Speed Dial - Documentación y Análisis de Proyecto (Dev.md)
 
 ## Estado Actual del Proyecto
-Tras analizar la carpeta `e:/Proyectos/groupspeeddial`, he detectado que contiene la versión **compilada y empaquetada** de la extensión (archivos generados por Webpack listos para producción o distribución), pero **no el código fuente original**.
+Tras analizar la carpeta `e:/Proyectos/vddgroupdial`, he detectado que contiene la versión **compilada y empaquetada** de la extensión (archivos generados por Webpack listos para producción o distribución), pero **no el código fuente original**.
 
 *   Según el `README.md`, el proyecto original está desarrollado con **Node.js, TypeScript, Vue.js y Vuetify**.
 *   Los archivos actuales son los *chunks* minificados de JavaScript (ej. `17.js`, `274.js`, `background_gsd.worker.js`), fuentes `.woff2` e iconos.
