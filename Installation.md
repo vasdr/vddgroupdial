@@ -21,6 +21,9 @@ These are the simplest browsers to run custom code. Follow these steps:
 Firefox has a very strict extension signature system, but testing them locally is very intuitive. You can use the `dist` folder directly or the pre-compiled `.xpi` package.
 
 ### Option 1: File `.xpi` (Permanent & Standard installation)
+> [!WARNING]
+> By default, standard versions of Mozilla Firefox strictly block standard installation of `.xpi` files unless they have been officially signed and verified by the Mozilla Add-ons (AMO) store. Use this installation method **only if** you are running Firefox Developer Edition, Firefox Nightly, or Firefox ESR with `xpinstall.signatures.required` set to `false` in `about:config`.
+
 1. Open Firefox and go directly to `about:addons`.
 2. Click on the tiny "Gear" icon (Tools for all add-ons) next to "Manage Your Extensions", and choose **Install Add-on From File...**.
 3. A system dialog pane to upload files will appear. Navigate to the root folder of this project (`vddgroupdial`) and select the file **`vddgroupdial.xpi`**.
